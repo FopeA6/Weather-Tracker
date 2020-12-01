@@ -1,4 +1,4 @@
-import App from '../App';
+import App from '../App.js';
 import { shallow } from 'enzyme';
 
 describe('App', () => {
@@ -9,7 +9,7 @@ describe('App', () => {
     });
 
     test('it renders', () => {
-        expect(wrapper.find('#app')).toHaveLength(1);
+        expect(wrapper.find('.App')).toHaveLength(1);
     });
 
 });
