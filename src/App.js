@@ -3,8 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import { NavBar } from './components';
 import { Welcome, About, Search } from './pages';
 
-
-
 function App() {
     return (
         <div className="App">

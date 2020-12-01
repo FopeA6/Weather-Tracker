@@ -5,12 +5,12 @@ import './style.css';
 const NavBar = ({ history }) => {
     return (
         <nav>
-            <NavLink className="home-link" to="/">Home</NavLink>
-            <NavLink activeClassName="active" to="/about">About</NavLink>
-            <NavLink activeClassName="active" to="/search">Search</NavLink>
-            <button>Back</button>
+            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+            <NavLink to="/about" activeClassName="active">About</NavLink>
+            <NavLink to="/search" activeClassName="active">Search</NavLink>
+            <button onClick={history.goBack}>Back</button>
         </nav>
     );
 }
 
-export default NavBar;
+export default withRouter(NavBar);

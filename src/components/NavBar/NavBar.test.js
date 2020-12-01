@@ -1,8 +1,10 @@
-import NavBar from './index';
+import { default as NavBar } from '.';
 import { shallow } from 'enzyme';
+
 
 describe('NavBar', () => {
     let wrapper, mockHistory;
+    
 
     beforeEach(() => {
         mockHistory = { goBack: jest.fn() }

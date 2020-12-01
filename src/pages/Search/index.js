@@ -11,15 +11,13 @@ class Search extends Component {
 
     render() {
         return (
-            <div id="search">
-                Where do you want to search?
+            <div id="search">Where do you want to search?
                 <SearchForm getResult={getResult}/>
 
                 <h1>{this.props.location}</h1>
 
                 { this.props.error ? <p>Oops there's been an error! {this.props.error}</p> : this.renderResult() }
-                
-                
+
             </div>
         );
     }
