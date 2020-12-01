@@ -8,6 +8,8 @@ const searchReducer = (state=initState, action) => {
             return { ...state, result: action.payload, loading: false, error: false };
         case 'SET_ERROR':
             return { ...state, error: action.payload, loading: false }
+        default:
+            return state;
     };
 };
 

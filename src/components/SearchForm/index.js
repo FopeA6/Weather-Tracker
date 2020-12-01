@@ -4,6 +4,7 @@ class SearchForm extends Component {
     state = { location: "" }
 
     handleSubmit = e => {
+        e.preventDefault();
         this.props.getResult(this.state.location);
     }
 
