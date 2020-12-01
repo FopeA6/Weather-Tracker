@@ -4,22 +4,21 @@ class SearchForm extends Component {
     state = { location: "" }
     
 
-    handleSubmit = e => {
-        this.props.getResult(this.state.location);
-        e.preventDefault();
+    handleInput = e => {
+        this.setState({ location: e.target.value });
     }
 
-    handleInput = e => {
-        const { location, value } = e.target;
-        this.setState({ [location]: value });
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.getResult(this.state.location);
+        this.setState({ location: "" })
     }
 
     render(){
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" />
-                <input type="submit" value={this.state.search} 
-                onChange={this.handleInput}/>
+                <input type="text"  name="userInput" value={this.state.location} onChange={this.handleInput}/>
+                <input type="submit" value= "Search" />
             </form>
         );
     };

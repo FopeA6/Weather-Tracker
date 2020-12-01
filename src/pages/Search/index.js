@@ -4,6 +4,9 @@ import { SearchForm, Result } from '../../components';
 import { getResult } from '../../actions';
 
 class Search extends Component {
+    componentDidMount(){
+        this.props.getResult('London')
+    }
     
     getResult = searchTerm => this.props.getResult(searchTerm);
 
@@ -12,11 +15,11 @@ class Search extends Component {
     render() {
         return (
             <div id="search">Where do you want to search?
-                <SearchForm getResult={getResult}/>
+                <SearchForm getResult={this.getResult}/>
 
                 <h1>{this.props.location}</h1>
 
-                { this.props.error ? <p>Oops there's been an error! {this.props.error}</p> : this.renderResult() }
+                { this.props.error ? <p>Oops there's been an error! </p> : this.renderResult() }
 
             </div>
         );

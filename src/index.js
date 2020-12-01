@@ -8,9 +8,9 @@ import App from './App'
 import './styles/index.css';
 
 ReactDOM.render(
+    <Provider store={store}>
     <Router>
-        <Provider store={store}>
         <App />
-        </Provider>
-    </Router>,
+    </Router>
+    </Provider>,
 document.getElementById("root"));
