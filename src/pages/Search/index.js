@@ -33,4 +33,4 @@ export const mSTP = state => ({
     error: state.error
 });
 
-export default connect(null, { getResult })(Search);
+export default connect(mSTP, { getResult })(Search);

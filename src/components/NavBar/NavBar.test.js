@@ -8,7 +8,7 @@ describe('NavBar', () => {
 
     beforeEach(() => {
         mockHistory = { goBack: jest.fn() }
-        wrapper = shallow(<NavBar history={mockHistory}/>)
+        wrapper = shallow(<NavBar.WrappedComponent history={mockHistory}/>)
     });
 
     test('it renders', () => {
