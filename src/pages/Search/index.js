@@ -7,6 +7,7 @@ class Search extends Component {
     componentDidMount(){
         this.props.getResult('London')
     }
+    //Triggers side effects, invoked after the component has been rendered to the DOM.
     
     getResult = searchTerm => this.props.getResult(searchTerm);
 
@@ -32,5 +33,8 @@ export const mSTP = state => ({
     loading: state.loading,
     error: state.error
 });
+
+// gets the redux state as a parameter and returns an object
+
 
 export default connect(mSTP, { getResult })(Search);
